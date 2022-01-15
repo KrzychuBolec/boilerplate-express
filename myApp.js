@@ -4,7 +4,7 @@ var app = express();
 console.log("Hello World")
 
 let handler = (req,res) =>{
-    res.send("Hello Express")
+    res.send(/views/index.html)
 }
 
 app.get("/",handler)

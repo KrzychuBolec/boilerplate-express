@@ -44,7 +44,7 @@ let timeTaker = (req,res,next) => {
 }
 
 let timeSend =(req,res) => {
-    res.send(req.time)
+    res.send({time: req.time})
 }
 
 app.get("/now",timeTaker,timeSend)

@@ -65,8 +65,15 @@ let queryFunc = (req,res) => {
     })
 }
 
-app.route("/name").get(queryFunc).post(queryFunc)
+app.get("/name/query", queryFunc)
 
+let postFunc = (req,res) => {
+    res.send({
+        name: `${req.body.first} ${req.body.last}`
+    })
+}
+
+app.post("/name",postFunc)
 
 
 

@@ -5,6 +5,7 @@ var app = express();
 const os = require("os")
 const user = os.userInfo()
 var env = require('dotenv').config()
+var bodyParser = require('body-parser')
 
 console.log(os.type())
 
@@ -19,6 +20,9 @@ let logger = (req,res,next) =>{
 }
 
 app.use(logger)
+
+app.use(bodyParser.urlencoded({extended: false}))
+
 
 let handler = (req,res) =>{
     res.sendFile(__dirname + "/views/index.html")

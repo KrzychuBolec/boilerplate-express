@@ -61,7 +61,7 @@ let queryFunc = (req,res) => {
     })
 }
 
-app.route("/name/query").get(queryFunc).post(queryFunc)
+app.route("/name").get(queryFunc).post(queryFunc)
 
 
 

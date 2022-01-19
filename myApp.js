@@ -55,6 +55,16 @@ let sendEcho = (req,res) => {
 
 app.get("/:word/echo",sendEcho)
 
+let queryFunc = (req,res) => {
+    res.send({
+        name: `${req.query.first} ${req.query.last}`
+    })
+}
+
+app.route("/name/query").get(queryFunc).post(queryFunc)
+
+
+
 
 
 

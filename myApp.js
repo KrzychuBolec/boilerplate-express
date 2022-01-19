@@ -3,7 +3,7 @@ const res = require('express/lib/response');
 var app = express();
 const os = require("os")
 const user = os.userInfo()
-var dotenv = require('dotenv').config()
+var env = require('dotenv').config()
 
 console.log(os.type())
 

@@ -49,6 +49,11 @@ let timeSend =(req,res) => {
 
 app.get("/now",timeTaker,timeSend)
 
+let sendEcho = (req,res) => {
+    res.send({echo: req.params.word})
+}
+
+app.get("/:word/echo",sendEcho)
 
 
 

@@ -5,11 +5,15 @@ const user = os.userInfo()
 
 console.log(os.type())
 
+app.use("/public",express.static(__dirname + "/public"))
+
 let handler = (req,res) =>{
     res.sendFile(__dirname + "/views/index.html")
 }
 
 app.get("/",handler)
+
+
 
 
 

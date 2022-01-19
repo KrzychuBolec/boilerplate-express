@@ -1,4 +1,5 @@
 var express = require('express');
+const res = require('express/lib/response');
 var app = express();
 const os = require("os")
 const user = os.userInfo()
@@ -12,6 +13,12 @@ let handler = (req,res) =>{
 }
 
 app.get("/",handler)
+
+app.get("/json",(req,res)=>{
+    res.json({"message" : "Hello json"})
+})
+
+
 
 
 
